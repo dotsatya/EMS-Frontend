@@ -4,6 +4,7 @@ import EmployeeFB from "../EmployeeDb/EmployeeFB.jsx";
 import TaskBoard from "../EmployeeDb/TaskBoard.jsx";
 import { getEmpTasks, updateTaskStatus } from "../../api/tasks.js";
 import { socket } from "../../socket.js";
+import { toast } from "react-toastify";
 
 const EmployeeDb = () => {
 
@@ -96,6 +97,8 @@ const EmployeeDb = () => {
         return updated.filter((task, index, arr) => arr.findIndex(t => t.id == task.id) === index);
       })
 
+      toast.success("Task completed successfully!");
+
     } catch (error) {
       console.error("Update failed", error);
     }
@@ -115,6 +118,8 @@ const EmployeeDb = () => {
         });
         return updated.filter((task, index, arr) => arr.findIndex(t => t.id == task.id) === index);
       })
+
+      toast.success("Task started!");
 
     } catch (error) {
       console.error("Start failed", error);

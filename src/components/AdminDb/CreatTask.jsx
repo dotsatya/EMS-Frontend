@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createTask, updateTask } from "../../api/tasks";
+import { toast } from "react-toastify";
 
 const CreatTask = ({ onTaskCreated, taskToEdit = null, onCancelEdit = null }) => {
   const [newTaskTitle, setNewTaskTitle] = useState("");
@@ -38,7 +39,7 @@ const CreatTask = ({ onTaskCreated, taskToEdit = null, onCancelEdit = null }) =>
         }
         );
         if (res && res.task) {
-          alert("Task updated successfully");
+          toast.success("Task updated successfully!");
           onTaskCreated(res.task);
           onCancelEdit();
         } else {
@@ -55,7 +56,8 @@ const CreatTask = ({ onTaskCreated, taskToEdit = null, onCancelEdit = null }) =>
         });
 
         onTaskCreated();
-        alert("Task created successfully");
+
+        toast.success("Task created!");
 
         setNewTaskTitle("");
         setNewTaskDate("");

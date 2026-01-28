@@ -102,7 +102,7 @@ const DuePopupTask = ({ task,formattedDate, handleShow, actionLabel, onAction })
             <p className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
              Created By
             </p>
-            <p className="mt-1 font-semibold text-slate-800 dark:text-slate-200 break-words">
+            <p className="mt-1 font-semibold text-slate-800 dark:text-slate-200 wrap-break-word">
               {task.Creator.username || "—"}
             </p>
           </div>
