@@ -1,164 +1,93 @@
-# 🧑‍💼 Employee Management System - Frontend
+<div align="center">
+  <h1>🧑‍💼 Employee Management System - Frontend</h1>
+  <p><strong>A modern, responsive UI for managing employees and tasks, built with React and Tailwind CSS.</strong></p>
+</div>
 
-A modern **Employee Management System** built using **⚛️ React JS** and **🎨 Tailwind CSS** that provides a clean, responsive UI for managing employees and tasks. This frontend connects to a https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip backend with MySQL database for full-stack functionality.
+<br />
 
-Check the Backend repository: https://github.com/dotsatya/EMS-Backend
+This frontend application provides an intuitive dashboard for administrators and employees, offering real-time updates and seamless task management. It connects directly to the Node.js backend API.
+
+🔗 **Backend Repository:** [EMS-Backend](https://github.com/dotsatya/EMS-Backend)
 
 ---
 
 ## 🚀 Features
 
 ### 🔐 Authentication
-- 👨‍💼 Admin Login
-- 👨‍🔧 Employee Login
-- 🔁 Role-based dashboard rendering
-- ✅ JWT token-based authentication
-- 🔒 Protected routes and API calls
-
----
+- 👨‍💼 **Admin & Employee Login:** Secure distinct access flows.
+- 🔁 **Role-based Rendering:** Dashboards dynamically load based on user roles.
+- ✅ **JWT Token Authentication:** Secure session management.
+- 🔒 **Protected Routes:** Unauthorized users are redirected to login.
 
 ### 📋 Task Management
-- ➕ **Admin**: Create tasks with:
-  - 📝 Title
-  - 📄 Description
-  - 🏷️ Category
-  - 📅 Due Date
-  - 👤 Assign to Employee
-- 🔄 Task Status Flow:
-  - 🆕 **New** → ⚡ **Active** → ✅ **Completed**
-  - ❌ **Failed** (Auto-assigned by backend cron job)
+- ➕ **Admin Creation:** Create tasks with Title, Description, Category, Due Date, and Assignee.
+- 🔄 **Status Flow:** `New` → `Active` → `Completed`. (Automated `Failed` states updated via backend cron).
+- ▶️ **Employee Actions:** Start and complete tasks directly from the dashboard.
 
----
-
-### ▶️ Task Actions
-- ▶️ **Start Task** (Employee)
-  → Moves task from **New → Active**
-- ✅ **Complete Task** (Employee)
-  → Moves task from **Active → Completed**
-
----
-
-### 📊 Dashboard & Live Counts
-- 📌 Shows real-time counts:
-  - 🆕 New Tasks
-  - ⚡ Active Tasks
-  - ✅ Completed Tasks
-  - ❌ Failed Tasks
-- Counts update automatically on user actions
-
----
+### 📊 Live Dashboard & Stats
+- 📌 **Real-time Metrics:** See active counts of New, Active, Completed, and Failed tasks.
+- ⚡ **Auto-Updating Counters:** Instant updates triggered via Socket.io events.
 
 ### 🧩 Component-Based Architecture
-- Reusable & scalable components:
-  - `TaskBoard`
-  - `TaskCard`
-  - `DueNewTasks`
-  - `DueActiveTasks`
-  - `CreatTask`
-  - `AllTask`
-- 🧠 Context API for state management
-- 🔄 Clean separation of UI and logic
-
----
+- ♻️ **Reusable Components:** Features like `TaskBoard`, `TaskCard`, and `CreateTask` ensure maintainability.
+- 🧠 **Context API:** Global state management (e.g., `AuthContext.jsx`).
 
 ### 🌙 UI & UX
-- 🌗 Light / Dark mode support
-- 📱 Fully responsive (mobile-friendly)
-- 🎴 Card-based modern UI
-- ⚡ Smooth updates with API integration
-- 🍞 Toast notifications for feedback
+- 🌗 **Light / Dark Mode:** Seamless UI transitions.
+- 📱 **Mobile Responsive:** Flexbox/Grid-based layouts for all devices.
+- 🍞 **Toast Notifications:** Feedback popups on interactions via `react-toastify`.
 
----
-
-### 🔗 Backend Integration
-- 🌐 RESTful API communication
-- 🔑 JWT token handling
-- 💾 User session persistence
-- 🔄 Real-time data fetching
-
----
-
-### 🔌 Real-Time Features
-The application uses https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip for instant updates between admin and employees:
-
-- **Admin Notifications**: Real-time updates when employees change task statuses
-- **Employee Notifications**: Instant alerts for new task assignments, updates, or deletions
-- **Live Dashboard**: Task counts and lists update automatically without page refresh
+### 🔌 Real-Time Functionality
+This application uses **Socket.io** for live synchronization between users:
+- **Instant Assignments:** Employees see new tasks without refreshing.
+- **Admin Alerts:** Admins see real-time status updates from employees.
+- **Live Updates:** Seamless deletion and modification synchronization.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - ⚛️ **React JS** (v19)
+- ⚡ **Vite** (Build Tool)
 - 🎨 **Tailwind CSS** (v4)
-- 🟨 **JavaScript (ES6+)**
-- ⚡ **Vite** (Build tool)
 - 🛣️ **React Router DOM** (Routing)
-- 📡 **Axios** (HTTP client)
-- 🔑 **JWT Decode** (Token handling)
-- 🍞 **React Toastify** (Notifications)
-- 🎯 **Lucide React** (Icons)
-- 📱 **React Icons** (Additional icons)
-- 🔌 **https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip Client** (Real-time communication)
+- 📡 **Axios** (API Client)
+- 🔌 **Socket.io-client** (WebSockets)
+- 🔑 **jwt-decode** (Token Management)
+- 🍞 **react-toastify** (Notifications)
+- 🎯 **lucide-react & react-icons** (Iconography)
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 Employee Management System/
-├── public/
-│   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+├── public/                  # Static assets
 ├── src/
-│   ├── api/
-│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip          # Axios instance & interceptors
-│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip         # Authentication API calls
-│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip        # Task management API calls
-│   ├── components/
-│   │   ├── AdminDb/
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   ├── Dashboard/
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   ├── EmployeeDb/
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   ├── TaskBoard/
-│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │   └── TaskListNo/
-│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   │       └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   │   └── others/
-│   │       └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   ├── context/
-│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip  # Authentication context
-│   ├── pages/
-│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip         # Role-based dashboard routing
-│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip        # Login page
-│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip       # Registration page
-│   ├── utils/
-│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip              # Main app component
-│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip             # App entry point
-│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip            # https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip client configuration
-│   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip            # Global styles
-├── .env                     # Environment variables
-├── .gitignore
-├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
-├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip                # This file
-└── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   ├── api/                 # Axios instance and API call modules
+│   │   ├── api.js           # Core Axios configuration
+│   │   ├── auth.js          # Authentication endpoints
+│   │   └── tasks.js         # Task management endpoints
+│   ├── components/          # Reusable UI components
+│   │   ├── AdminDb/         # Admin dashboard components
+│   │   ├── EmployeeDb/      # Employee dashboard components
+│   │   ├── Dashboard/       # Shared dashboard UI
+│   │   └── others/          # Headers, loaders, modals, etc.
+│   ├── context/             # Global Context API providers
+│   │   └── AuthContext.jsx
+│   ├── pages/               # Main route views
+│   │   ├── Home.jsx         
+│   │   ├── Login.jsx        
+│   │   └── Signup.jsx       
+│   ├── utils/               # Helper functions
+│   ├── App.jsx              # Main React Component
+│   ├── main.jsx             # React DOM injection
+│   ├── socket.js            # Socket.io client setup
+│   └── index.css            # Global Tailwind imports
+├── .env                     # Environment variables (ignored in Git)
+├── package.json             # NPM dependencies
+└── vite.config.js           # Vite configuration
 ```
 
 ---
@@ -166,148 +95,56 @@ Employee Management System/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
-- https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip (v16+)
-- Backend server running (see backend README)
+- **Node.js** (v16+)
+- **Backend API Running** (See backend README)
 
 ### Setup Steps
-```bash
-# Clone the repository
-git clone <repository-url>
-cd Employee Management System
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd "Employee Management System"
+   ```
 
-# Install dependencies
-npm install
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-# Create environment file
-cp https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip .env
-# Edit .env with your backend URL:
-# VITE_API_URL=http://localhost:3000
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_API_URL=http://localhost:6969
+   VITE_WEBSOCKET_URL=http://localhost:6969
+   ```
 
-# Start development server
-npm run dev
-```
-
-The app will run on `http://localhost:5173` by default.
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-Create a `.env` file in the root directory:
-
-```env
-VITE_API_URL=http://localhost:3000        # Backend API URL
-VITE_WEBSOCKET_URL=http://localhost:3000  # https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip server URL (same as backend)
-```
-
-### Available Scripts
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   *The app will automatically launch in your browser at `http://localhost:5173`.*
 
 ---
 
 ## 🔗 API Integration
 
-The frontend communicates with the backend through RESTful APIs:
-
-### Authentication APIs
-- `POST /api/auth/signup` - User registration
-- `POST /api/auth/login` - User login
-
-### Task APIs
-- `POST /api/tasks/create` - Create task (Admin)
-- `GET /api/tasks/all` - Get all tasks (Admin)
-- `GET /api/tasks/employee` - Get employee tasks
-- `PUT /api/tasks/status` - Update task status
-
-All API calls include JWT tokens automatically via Axios interceptors.
-
----
-
-## 🎨 UI Components
-
-### Admin Dashboard
-- Task creation form
-- Overview of all employees and their tasks
-- Task status management
-
-### Employee Dashboard
-- Personal task board
-- Task status updates (Start/Complete)
-- Task counts and statistics
-
-### Authentication Pages
-- Login form with validation
-- Signup form with role selection
-- Protected routing
-
----
-
-## 📱 Responsive Design
-
-- **Mobile-first** approach
-- **Breakpoint-based** layouts
-- **Touch-friendly** interactions
-- **Adaptive** UI elements
-
----
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+The frontend uses an Axios interceptor to append the JWT token to all secured routes. 
+- **Auth APIs:** `/api/auth/signup`, `/api/auth/login`
+- **Task APIs:** `/api/tasks/create`, `/api/tasks/all`, `/api/tasks/employee`, `/api/tasks/status`
 
 ---
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
-1. **API Connection Failed**
-   - Ensure backend server is running
-   - Check VITE_API_URL in .env
-   - Verify CORS settings
-
-2. **Authentication Issues**
-   - Clear localStorage
-   - Check JWT token expiration
-   - Verify backend is accessible
-
-3. **Build Errors**
-   - Clear node_modules and reinstall
-   - Check https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip version compatibility
-
----
-
-## 📌 Future Enhancements
-
-- 🔔 Push notifications for task updates
-- 🎯 Task priority levels and filtering
-- 📊 Advanced analytics and reporting
-- 🖱️ Drag & drop task management
-- 📅 Calendar view for due dates
-- 👥 Team collaboration features
-- 📱 Progressive Web App (PWA) support
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the ISC License.
+1. **API Connection Failed:**
+   - Ensure your backend server is running.
+   - Verify `VITE_API_URL` exactly matches your backend URL.
+2. **Authentication Loop / Immediate Logout:**
+   - Check if your backend JWT token has expired.
+   - Clear your browser's `localStorage` and try logging in again.
+3. **Real-time Updates Failing:**
+   - Check if `VITE_WEBSOCKET_URL` is set correctly.
+   - Verify network connections for WebSocket protocols.
 
 ---
 
@@ -319,6 +156,4 @@ This project is licensed under the ISC License.
 ✨ *A creative developer blending logic with design to craft meaningful digital experiences.*
 
 ---
-
 ⭐ If you like this project, don’t forget to **star the repo!!!**
-
