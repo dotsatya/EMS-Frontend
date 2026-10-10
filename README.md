@@ -2,6 +2,8 @@
 
 A modern **Employee Management System** built using **⚛️ React JS** and **🎨 Tailwind CSS** that provides a clean, responsive UI for managing employees and tasks. This frontend connects to a Node.js/Express backend with MySQL database for full-stack functionality.
 
+Check the Backend repository: https://github.com/dotsatya/EMS-Backend
+
 ---
 
 ## 🚀 Features
